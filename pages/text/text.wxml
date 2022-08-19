@@ -17,3 +17,7 @@
 <text space="ensp">Hello World\n</text>
 <text decode>5 &gt; 3\n</text>
 <text decode>3 &lt; 5</text>
+<text decode>3 &lt; 5</text>
+<text decode>5 &gt; 3\n</text>
+<text decode>3 &lt; 5</text>
+<text decode>3 &lt; 5</text>
