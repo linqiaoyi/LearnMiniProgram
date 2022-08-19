@@ -1,0 +1,4 @@
+<!--pages/category/category.wxml-->
+<text>pages/category/category.wxml</text>
+<view>{{message}}</view>
+<button bindtap="handleBtnClick">点击改变message</button>
