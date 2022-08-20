@@ -1,0 +1,24 @@
+<!--pages/button/button.wxml-->
+<!-- 1.button的基本使用 属性：block -->
+<button>按钮</button>
+<!-- 2.size属性：mini 属性改为：lineblock -->
+<button size="mini">按钮</button>
+<!-- 3.type属性： -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<!-- 4.plain:镂空效果 -->
+<button size="mini" plain>按钮</button>
+<!-- 5.disabld :不可用 -->
+<button size="mini" disabled>按钮</button>
+<!-- 6.loading:加载 -->
+<button size="mini" loading="{{isLoading}}">按钮</button>
+<!-- 7.hover-class -->
+<button hover-class="pressed">按钮</button>
+<!-- 8.open-type -->
+<view>
+  <button size="mini" open-type="contact">客服会话</button>
+  <button size="mini" open-type="share">程序分享</button>
+  <button size="mini" open-type="getPhoneNumber">获取电话</button>
+  <button size="mini" open-type="getUserInfo">用户信息</button>
+</view>
