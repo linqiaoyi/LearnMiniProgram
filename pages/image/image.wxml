@@ -1,0 +1,32 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image的基本使用 -->
+<!-- 
+  重点：
+  1.image组件可以写成单标签，也可以修成双标签
+  2.image组件有默认自己的大小：320*240
+  3.image组件时一个行内块元素（inline-block
+
+ -->
+ <!-- <image/> -->
+ <!-- <text>哈哈哈</text> -->
+ <!-- 2.src：本地路径（相对路径/绝对路径）/远程地址 -->
+ <!-- 2.1相对路径 -->
+ <image src="../../assets/test/collect.png"/>
+ <!-- 2.2绝对路径 -->
+ <image src="/assets/test/collect.png"/>
+ <!-- 2.3远程图片 -->
+ <image src=""></image>
+
+ <!-- 补充：相册中的图片 -->
+ <button bindtap="handleChooseAlbum">选中图片</button>
+ <image src="http://mmbiz.qpic.cn/sz_mmbiz_jpg/GEWVeJPFkSEz7tgvlaTtv2MYO01RZr0y2lKyiby6STpicpYB2a46S17caRhHMDhotyz62xeNAwc5CibskvQH3eKwg/0?wx_fmt=jpeg{{imagePath}}"></image>
+
+ <!-- 3.bindload: 监听图片加载完成 -->
+ <!-- lazyload图片懒加载 -->
+ <view>--------</view>
+ <image wx:for="{{1}}"
+ src="http://mmbiz.qpic.cn/sz_mmbiz_jpg/GEWVeJPFkSEz7tgvlaTtv2MYO01RZr0y2lKyiby6STpicpYB2a46S17caRhHMDhotyz62xeNAwc5CibskvQH3eKwg/0?wx_fmt=jpeg" bindload="handleImageLoad"
+ lazy-load></image>
+
+ <!-- 4.show-menu-by-longpress：长按图片出现识别小程序码 -->
+ <image src="http://mmbiz.qpic.cn/sz_mmbiz_jpg/GEWVeJPFkSEz7tgvlaTtv2MYO01RZr0y2lKyiby6STpicpYB2a46S17caRhHMDhotyz62xeNAwc5CibskvQH3eKwg/0?wx_fmt=jpeg" show-menu-by-longpress></image>

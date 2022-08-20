@@ -1,0 +1,25 @@
+<!--pages/input/input.wxml-->
+<!-- 1.input的基本使用 -->
+<input />
+<!-- 2.value：input中的默认值 -->
+<input value="text"/>
+
+<!-- 3.type:决定键盘的类型（文本输入键盘/数字/身份证） -->
+<input type="text"/>
+<!-- 
+  type: text文本
+        number数字
+        idcard身份证
+        digit带小数的数字键盘
+        safe-password密码安全数据键盘
+        nickname昵称输入键盘
+ -->
+ <!-- 4.password:暗文 -->
+ <input password />
+ <input type="text" placeholder="请输入账号"/>
+ <input type="text" confirm-type="send" />
+ <!-- 6.input绑定事件 -->
+ <input bindinput="handleInput"
+        bindfocus="handleFocus"
+        bindblur="handleBlur"
+        placeholder="请输入手机号"/>

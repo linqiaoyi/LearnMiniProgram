@@ -1,0 +1,19 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view的基本使用 -->
+<view>
+  hahaha
+  <text>你好</text>
+  <button size="mini">按钮</button>
+</view>
+
+<view class="box2">
+  hehehe
+</view>
+<!-- 2.hover-class:用户按下组件时，显示的样式 -->
+<view class="box1" 
+      hover-class="hover-view"
+      hover-stay-time="{{0}}">box1</view>
+      <!-- 3. 阻止事件冒泡-->
+<view class="box2" hover-class="hover-view">hello，我是box2
+  <view class="box1" hover-stop-propagation>你好,我是box1</view>
+</view>
