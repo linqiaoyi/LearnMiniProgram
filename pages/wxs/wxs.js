@@ -1,12 +1,14 @@
-// pages/home/home.js
+// pages/wxs/wxs.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    price:"62.33333",
+    time:896098160,
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

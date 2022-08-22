@@ -1,6 +1,11 @@
 <!--pages/home/home.wxml-->
+<include src="/template/header.wxml"></include>
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
 
 <view>知识点三</view>
 <view>呵呵呵</view>
+<import src="/template/template.wxml"></import>
+<template is="contentItem" data="{{btnText:'按钮',content:'哈哈哈'}}"/>
+<template is="abc"></template>
+<include src="/template/footer.wxml"></include>

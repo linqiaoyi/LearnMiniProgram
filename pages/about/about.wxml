@@ -1,2 +1,57 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname + ' '+ lastname}}</view>
+<view>{{age >= 18 ? '成年人':'未成年人'}}</view>
+<view>{{nowTime}}</view>
+<button size="mini" bindtap="handleChangeColor">切换颜色</button>
+<view class="box {{isActive ? 'active':'' }}" >hello</view>
+<!-- <map longitude="116.11" latitude="39.6"></map> -->
+<view>--条件渲染---</view>
+<!-- wx:if的使用 -->
+<button size="mini" bindtap="handleSwitchShow">按钮</button>
+<view wx:if="{{isShow}}">哈哈哈</view>
+<!-- wx:elif/wx:else -->
+<button size="mini" bindtap="handleIncrement">分数递增10</button>
+<text>当前的分数是：{{score}}</text>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+<view hidden="{{false}}">我是hidden</view>
+
+<view>---------列表渲染-----------</view>
+<!-- 1.wx:for -->
+<!-- 1.1遍历数组/字符串/数字 -->
+<view wx:for="{{students}}">{{item.name}}——{{item.age}}</view>
+<view wx:for="{{['abc','bcd','cde']}}">{{item}} {{index}}</view>
+<view wx:for="{{3}}">aabb</view>
+<view wx:for="hello">{{item}}</view>
+<!-- 2.block标签 -->
+<block wx:if="{{isShow}}">
+  <button size="mini">按钮</button>
+  <view>呵呵呵</view>
+  <text>我是内容</text>
+</block>
+
+<block wx:for="{{3}}">
+  <button size="mini">按钮</button>
+  <view>呵呵呵</view>
+  <text>我是内容</text>
+</block>
+
+<!-- 3.给item,index起名字 -->
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}} {{i}}</view>
+
+<block wx:for="{{nums}}" wx:for-item="num">
+  <block wx:for="{{num}}" wx:for-item="n">
+    <view>{{n}}</view>  
+  </block>
+</block>
+
+<!-- 4.key的作用 -->
+<view wx:for="{{letters}}" wx-item="item" wx:key="item">{{item}}</view>
+<import src="/template/template.wxml"/>
+
+<template is="contentItem" data="{{btnText:'警告',content:'呵呵呵'}}"/>
+<template is="contentItem" data="{{btnText:'点击',content:'嘿嘿嘿'}}"/>

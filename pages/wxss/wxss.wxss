@@ -1,0 +1,7 @@
+/* pages/wxss/wxss.wxss */
+@import "style/box.wxss";
+@import "style/searchbar.wxss";
+@import "style/weui-icon.wxss";
+.content{
+  background-color: palegoldenrod !important;
+}

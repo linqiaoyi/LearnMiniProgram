@@ -1,11 +1,33 @@
-// pages/home/home.js
+// pages/wxss/wxss.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    inputShowed: false,
+    inputVal: '',
+  },
+  showInput() {
+    this.setData({
+      inputShowed: true,
+    });
+  },
+  hideInput() {
+    this.setData({
+      inputVal: '',
+      inputShowed: false,
+    });
+  },
+  clearInput() {
+    this.setData({
+      inputVal: '',
+    });
+  },
+  inputTyping(e) {
+    this.setData({
+      inputVal: e.detail.value,
+    });
   },
   /**
    * 生命周期函数--监听页面加载

@@ -1,0 +1,7 @@
+<template name="contentItem">
+  <text>{{content}}</text>
+  <button>{{btnText}}</button>
+</template>
+<template name="abc">
+  <text>我是abc模板的内容</text>
+</template>

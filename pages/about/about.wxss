@@ -1,1 +1,7 @@
 /* pages/about/about.wxss */
+.box{
+  background-color: orange;
+}
+.active{
+  background-color: greenyellow;
+}
