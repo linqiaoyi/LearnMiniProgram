@@ -3,3 +3,8 @@
   color:red;
   font-size:30px;
 }
+.box{
+  width: 300rpx;
+  height: 300rpx;
+  background-color: orange;
+}

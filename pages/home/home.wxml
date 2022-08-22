@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-
-<view>知识点三</view>
-<view>呵呵呵</view>
+<!-- 1.事件处理回顾 -->
+<button bindtap="handleBtnClick" size="mini">按钮</button>
+<button bind:tap="handleBtnClick" size="mini">按钮</button>
+<button catch:tap="handleBtnClick" size="mini">按钮</button>
+<!-- 2. -->
