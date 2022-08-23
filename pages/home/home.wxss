@@ -8,3 +8,37 @@
   height: 300rpx;
   background-color: orange;
 }
+.outer{
+  width: 400rpx;
+  height: 400rpx;
+  background-color: rgb(255, 251, 0);
+  color:white;
+}
+.inner{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: rgba(255, 68, 0, 0.945);
+  color:white;
+}
+.container{
+  display:flex;
+}
+.item{
+  flex:1;
+  text-align:center;
+}
+.view1{
+  width: 600rpx;
+  height: 600rpx;
+  background-color: red;
+}
+.view2{
+  height: 400rpx;
+  width: 400rpx;
+  background-color: teal;
+}
+.view3{
+  height: 200rpx;
+  width: 200rpx;
+  background-color: pink;
+}
