@@ -1,5 +1,16 @@
 /* pages/home/home.wxss */
 .title{
-  color:red;
   font-size:30px;
+}
+.red{
+  font-weight: 700;
+  background-color: turquoise;
+}
+.green{
+  font-size:500;
+  background-color:orange;
+}
+.blue{
+  font-size: 400;
+  background-color:paleturquoise;
 }
