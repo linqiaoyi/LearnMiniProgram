@@ -1,3 +1,26 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
+<!-- 1.navigator页面跳转 -->
+<navigator url="/pages/detail/detail">跳转到详情页</navigator>
+
+<!-- 2.navigator属性：open-type -->
+<!-- 
+  取值：
+  navigate：默认值
+  redirect：关闭当前页面，跳转到应用内的某个页面，但不允许跳转到tabbar页面，并且不能返回，不是一个压栈
+  switchTab：跳转到tabBar页面，并关闭其他所有非tabBar页面，需要在tabBar中定义
+  reLaunch:关闭所有的页面，打开应用中的某个页面，直接展示某个页面，并且可以跳转到tabBar页面
+  exit：退出小程序，target="miniProgram"生效
+-->
+<navigator url="/pages/detail/detail" open-type="redirect">跳转到详情页(redirect)</navigator>
+<navigator url="/pages/about/about" open-type="switchTab">跳转到关于页(switchTab)</navigator>
+<navigator url="/pages/about/about" open-type="reLaunch">跳转到详情页(reLaunch)</navigator>
+
+<!-- 3.跳转过程中数据的传递 -->
+<navigator url="/pages/detail/detail?name=why&age=18">跳转到详情页</navigator>
+
+<view>{{title}}</view>
+
+<!-- 4.通过代码进行页面跳转 -->
+<button size="mini" bind:tap="handlePushDetail">跳转到详情页</button>
