@@ -1,3 +1,21 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
+<!-- 1.展示轮播图 -->
+<w-swiper list="{{banner}}"/>
+<!-- 2.展示推荐数据 -->
+<w-recommend list="{{recommend}}" bind:imageLoad="handleImageLoad"/>
+<!-- 3.本周流行 -->
+<w-popular/>
+<!-- 4.tab-control -->
+<w-tab-control titles="{{titles}}"
+              bind:itemClick="handleTabControl"
+              id="tab-control"
+              class="{{isFixed ? 'fixed' : ''}}"/>
+<w-tab-control titles="{{titles}}"
+              bind:itemClick="handleTabControl"
+              wx:if="{{isFixed}}"
+              />
+<!-- 5.展示商品数据 -->
+<w-goods goods_list="{{goods[currentType].list}}" />
+<!-- 6.回到顶部 -->
+<!-- hidden对于自定义的组件无效 -->
+<w-back-top wx:if="{{showBackTop}}"/>
