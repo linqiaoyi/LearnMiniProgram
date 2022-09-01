@@ -1,0 +1,81 @@
+/* pages/detail/childCpns/w-shop-info/w-shop-info.wxss */
+.shop-info{
+  margin:30rpx 0;
+  border-bottom: 8rpx solid #eee;
+  border-top: 8rpx solid #eee;
+}
+.info-title{
+  padding: 20rpx 10rpx;
+}
+.icon{
+  width: 80rpx;
+  height: 80rpx;
+  border: 2rpx solid rgba(200,200,200,.6);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.name{
+  margin-right: 10rpx;
+}
+.sell-info{
+  display: flex;
+  align-items: center;
+}
+.sell-info .totol-sell{
+  flex:1;
+  text-align: center;
+  align-items: center;
+}
+.count{
+  font-size: 40rpx;
+}
+.text{
+  font-size: 28rpx;
+}
+.sell-info .good-count{
+  flex:1;
+  text-align: center;
+  align-items: center;
+  border-right: 2rpx  solid rgba(200,200,200,.6) ;
+}
+.sell-info .shop-detail{
+  flex:2;
+  
+}
+.grade-row{
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.grade-row .desc{
+  width:180rpx;
+}
+.grade-row .score{
+  flex: 1;
+  padding: 5rpx 5rpx 0;
+}
+.grade-row .better{
+  color:#fff;
+  flex: 1;
+}
+.good{
+  color: #ff5777;
+}
+.less{
+  color: #5ea732;
+}
+.bcg-good text{
+  background: #ff5777;
+}
+.bcg-less text{
+  background: #5ea732;
+}
+.btn{
+  padding:30rpx 70rpx 50rpx;
+}
+.btn button{
+  border-radius: 10rpx;
+  color: #fff;
+  background-color: #ff5777;
+  /* border: 3rpx solid rgba(200,200,200,.6); */
+}

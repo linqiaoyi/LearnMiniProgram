@@ -1,0 +1,22 @@
+/* pages/profile/childCpns/w-info/w-info.wxss */
+.info{
+  display: flex;
+  padding:30rpx 0;
+  border-bottom: 24rpx solid rgba(0,0,0,.05);
+}
+.info-item{
+  flex:1;
+  text-align: center;
+}
+.discount{
+  border-left: 2rpx solid rgba(0,0,0,.1);
+  border-right: 2rpx solid rgba(0,0,0,.1);
+}
+.count{
+  color:#ff5777;
+  font-size: 40rpx;
+}
+.mine{
+  font-size: 32rpx;
+  color:#333;
+}

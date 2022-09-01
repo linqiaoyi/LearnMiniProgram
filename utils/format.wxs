@@ -1,0 +1,38 @@
+//价格/数量格式化
+var formatNum = function (num){
+  return num < 10000 ? num:(num/10000).toFixed(2)+'万';
+}
+
+//时间格式化
+var formatDate = function(date){
+  var date = getDate(date)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDay()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  return [year,month,day].map(formatNumber).join('/') + ' '+ [hour,minute,second].map(formatNumber).join(':')
+}
+var formatNumber = function(n){
+  n = n.toString()
+  return n[1] ? n : '0' + n 
+}
+
+//防抖函数，解决重复频繁调用问题
+// function debounce(func,delay){
+//   var timer = null
+//   return function(...args){
+//       if(timer) clearTimeout(timer)
+//       timer = setTimeout(()=>{
+//           func.apply(this,args)
+//       },delay)
+//   }
+// }
+
+module.exports={
+  formatNum:formatNum,
+  formatDate:formatDate
+  // debounce:debounce
+}
+

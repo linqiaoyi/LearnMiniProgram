@@ -35,27 +35,38 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 1.请求轮播图和推荐数据
-    getMultiData()
-    .then(res => {
-    // 2.取出轮播图和推荐的数据
-    const banner = res.data.data.banner.list
-    const recommend = res.data.data.recommend.list
-    // 3.放到data中
-      this.setData({
-        banner,
-        recommend
-      })
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    //发送网络请求
+    this._getData()
+  },
+  // 网络请求函数
+  _getData(){
+    // 1.获取轮播图和推荐的信息
+    this._getMultiData();
     // 2.获取商品数据
     this._getGoodsInfo('pop')
     this._getGoodsInfo('new')
     this._getGoodsInfo('sell')
   },
-  // 网络请求函数
+  _getMultiData(){
+    getMultiData()
+    .then(res => {
+      // 2.取出轮播图和推荐的数据
+      const banner = res.data.banner.list
+      const recommend = res.data.recommend.list
+      /**
+       * 轮播图所有数据的另一种取法
+       * const banner = res.data.data.banner.list.map(item => item.image)
+       */
+      // 3.放到data中
+        this.setData({
+          banner,
+          recommend
+        })
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
   _getGoodsInfo(type){
     // 1.获取页码
     const page = this.data.goods[type].page + 1;
@@ -64,8 +75,7 @@ Page({
     getGoodsInfo(type,page)
     .then(res =>{
       // 2.1取出数据
-      const list = res.data.data.list;
-
+      const list = res.data.list;
       // 2.2将数据设置到对应的type的list中
       const oldList = this.data.goods[type].list;
       oldList.push(...list);
@@ -88,12 +98,17 @@ Page({
     // console.log(this.data.currentTabIndex) 
     this.setData({
       currentType:type
-    })
-    
+    }) 
+    console.log(this.selectComponent('.fixed'))
+    this.selectComponent('#tab-control').properties.currentIndex = index
+    this.selectComponent('.fixed').properties.currentIndex = index
 },
   handleImageLoad(){
     wx.createSelectorQuery().select('#tab-control').boundingClientRect(rect => {
-      this.data.tabScrollTop = rect.top
+      this.setData({
+        tabScrollTop :rect.top
+      })
+      console.log('rect.top',rect.top)
     }).exec()
   },
   onShow(){
@@ -107,7 +122,6 @@ Page({
     // console.log(options)
     // 1.取出scrollTop
     const scrollTop = options.scrollTop;
-    console.log(scrollTop)
     // 2.修改showBackTop属性
     // 官方：不要在滚动的函数回调中频繁的调用this.setData
     const flag = scrollTop >= TOP_DISTANCE;
@@ -123,6 +137,13 @@ Page({
         isFixed: flag2
       }) 
     }
+
+    wx.createSelectorQuery().select('#tab-control').boundingClientRect(rect => {
+      const show = rect.top > 0
+      this.setData({
+        isFixed: !show
+      })
+    }).exec()
   },
   /**
    * 用户点击右上角分享

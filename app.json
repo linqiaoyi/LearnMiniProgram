@@ -3,9 +3,11 @@
     "pages/home/home",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/detail/detail"
   ],
   "tabBar": {
+    "selectedColor": "#ff5777",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -39,5 +41,6 @@
     "backgroundColor": "#eee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

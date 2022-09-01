@@ -1,0 +1,45 @@
+/* pages/detail/childCpns/w-param-info/w-param-info.wxss */
+.header{
+  font-size: 36rpx;
+  padding:30rpx 0rpx;
+}
+.param-info{
+  padding:40rpx 30rpx;
+  font-size: 30rpx;
+  border-bottom:12rpx solid #f2f2f2;
+}
+.size{
+  display: flex;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-bottom: 4rpx solid #f2f2f2;
+  text-align: center;
+}
+.size-title{
+  width: 160rpx;
+}
+.size-item{
+  flex: 1;
+  display: flex;
+}
+.item{
+  flex: 1;
+}
+.param-item{
+  display: flex;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+  text-align: center;
+}
+.item-key{
+  width: 160rpx;
+}
+.item-value{
+  flex:2;
+  color:#ff5777;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+
+}

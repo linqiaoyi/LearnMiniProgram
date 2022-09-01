@@ -1,4 +1,9 @@
 <!--pages/home/home.wxml-->
+<view wx:if="{{isFixed}}"> 
+  <w-tab-control titles="{{titles}}"
+              bind:itemClick="handleTabControl"
+              class="fixed"/>
+</view>
 <!-- 1.展示轮播图 -->
 <w-swiper list="{{banner}}"/>
 <!-- 2.展示推荐数据 -->
@@ -7,13 +12,8 @@
 <w-popular/>
 <!-- 4.tab-control -->
 <w-tab-control titles="{{titles}}"
-              bind:itemClick="handleTabControl"
-              id="tab-control"
-              class="{{isFixed ? 'fixed' : ''}}"/>
-<w-tab-control titles="{{titles}}"
-              bind:itemClick="handleTabControl"
-              wx:if="{{isFixed}}"
-              />
+               id="tab-control"
+               bind:itemClick="handleTabControl"/>
 <!-- 5.展示商品数据 -->
 <w-goods goods_list="{{goods[currentType].list}}" />
 <!-- 6.回到顶部 -->

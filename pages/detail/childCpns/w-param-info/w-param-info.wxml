@@ -1,0 +1,40 @@
+<!--pages/detail/childCpns/w-param-info/w-param-info.wxml-->
+<view class="param-info">
+  <text class="header">参数信息</text>
+  <view class="size-info">
+    <block wx:for="{{paramInfo.size}}"
+          wx:for-item="sizeItem"
+          wx:for-index="sizeIndex"
+          wx:key="sizeIndex">
+          <view class="size-table">
+            <block wx:for="{{sizeItem}}"
+                    wx:for-item="sItem"
+                    wx:for-index="sIndex"
+                    wx:key="sIndex">
+                    <view class="size">
+                      <view class="size-title">{{sItem[0]}}</view>
+                      <block wx:for="{{sItem}}"
+                            wx:for-item="item"
+                            wx:for-index="index"
+                            wx:key="index"
+                            class="size-item">
+                            <text class="item">{{index ? item : ''}}</text>
+                      </block> 
+                    </view>
+            </block>
+          </view>
+    </block>
+  </view>
+  <view class="more-info">
+    <block wx:for="{{paramInfo.infos}}"
+        wx:for-item="infoItem"
+        wx:for-index="infoIndex"
+        wx:key="infoIndex">
+        <view class="param-item">
+          <text class="item-key">{{infoItem.key}}</text>
+          <text class="item-value">{{infoItem.value}}</text>
+        </view>
+    </block>
+  </view>
+
+</view>

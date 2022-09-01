@@ -26,7 +26,7 @@ Component({
         this.triggerEvent('imageLoad')
         // 这样改页面不会刷新，没有用setData
         this.data.isLoad = true
-        console.log('图片加载完成')
+        // console.log('图片加载完成')
       }
     }
   }

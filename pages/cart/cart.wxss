@@ -1,1 +1,7 @@
 /* pages/cart/cart.wxss */
+.cart{
+  height: 100%;
+}
+.cart-item{
+  height: calc(100vh - 88rpx);
+}

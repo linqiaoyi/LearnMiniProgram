@@ -1,0 +1,7 @@
+<!--components/w-check-icon/w-check-icon.wxml-->
+<view class="check-icon"
+      size='18'
+      style="border-color : {{isChecked ? '#ff5777' : '#aaa'}};background:{{isChecked ? '#ff5777':'#fff'}}">
+</view>
+
+      

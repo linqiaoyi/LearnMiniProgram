@@ -21,6 +21,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handlePushDetail(event){
+      const iid = event.currentTarget.dataset.iid;
+      wx.navigateTo({
+        url:'/pages/detail/detail?iid='+iid,
+      })
+    }
   }
 })

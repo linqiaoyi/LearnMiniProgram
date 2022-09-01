@@ -1,0 +1,38 @@
+<!--pages/detail/childCpns/w-comment-info/w-comment-info.wxml-->
+<wxs src="../../../../utils/format.wxs" module="wxs"/>
+<view class="comment-info">
+  <view class="info-title">
+    <view class="user-comment">用户评价</view>
+    <view class="more">更多 >></view>
+  </view>
+  <block wx:for="{{commentInfo}}">
+    <view class="user-info">
+      <image class="icon" src="{{item.user.avatar}}"/>
+      <text class="uname">{{item.user.uname}}</text>
+    </view>
+    <view class="content-info"> 
+      <view class="content">{{item.content}}</view>
+      <text class="created">{{wxs.formatDate(item.created)}}</text>
+      <text class="style">{{item.style}}</text>
+    </view>
+  </block>
+  <view class="image-list">
+    <block wx:for="{{commentInfo}}"  
+         wx:for-item="images"
+         wx:for-index="xindex"
+         wx:key="xindex">
+    <block wx:if="{{images.images}}">
+      <block wx:for="{{images.images}}"
+             wx:for-item="image" 
+             wx:for-index="yindex" 
+             wx:key="yindex"> 
+        <image class="image" src="{{image}}" mode="widthFix"/>
+        <image class="image" src="{{image}}" mode="widthFix"/>
+        <image class="image" src="{{image}}" mode="widthFix"/>
+      </block>
+    </block>
+  </block>
+  </view>
+  
+</view>
+
